@@ -82,7 +82,9 @@ function calculateTotal()
 result = "Input Values Out of Range";
 for (let i = 0; i < lookup_table.length; i++) {
     if(lookup_table[i][0] == pred_vector[0] && lookup_table[i][1] == pred_vector[1] && lookup_table[i][2] == pred_vector[2] && lookup_table[i][3] == pred_vector[3] && lookup_table[i][4] == pred_vector[4]){
-        result = lookup_table[i][5];
+        result = lookup_table[i][5]*100;
+        result = result.toFixed(1);
+        result = result + " %";
     }
 
 }
