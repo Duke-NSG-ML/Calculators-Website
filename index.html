@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SCS Prediction Calculator</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<form>
+  
+  <div class="segment">
+    <h1 style="color:black;">SCS Success Prediction Calculator</h1>
+  </div>
+  
+  <h3> Does the patient have a history of long-term opiate use? </h3> 
+  <label>
+    <input type="number"  id='var1' class="qty"  placeholder="0 or 1"/>
+  </label>
+  
+  <h3> Is there a history of tumor without metastasis? </h3>
+
+  <label>
+    <input type="number" class="qty"   id='var2' placeholder="0 or 1"/>
+  </label>
+  
+  
+  <h3> Presence of polypharmacy? </h3>
+
+  <label>
+    <input type="number" class="qty"   id='var4' placeholder="0 or 1"/>
+  </label>
+  
+  <h3> Concurrent benzodiazepine Usage?  </h3>
+ 
+   <label>
+    <input type="number" class="qty"  id='var5' placeholder="0 or 1"/>
+  </label>
+  
+    <h3> Which pre-dose group* are they part of? </h3>
+
+  <label>
+    <input type="number" class="qty"   id='var3' placeholder="1, 2, 3, or 4"/>
+  </label>
+  
+   <div class="segment" style="color:black;">
+    <h1>Prediction:</h1>
+     <span id="total_value" style='color:black;'><h1>0</h1></span>
+     </br>
+      </br>
+
+  </div>
+  
+  </br>
+  </br>
+  <h7>SCS Success defined as: opioid dose stability or reduction one year after SCS </h7>
+  </br>
+  </br>
+  <h7>*Pre-Dose Groups are defined as: </h7>
+  </br>
+  </br>
+  <h7>For more information, view full paper here:  </h7>
+  
+</form>
+<!-- partial -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
+ 
