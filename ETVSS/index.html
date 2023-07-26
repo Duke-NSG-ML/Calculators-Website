@@ -14,7 +14,7 @@
         <main>
             <div class="calculator">
                 <div class="form-group">
-                    <label for="input1">Input 1 (Select one option):</label>
+                    <label for="input1"><h6>Age of Patient:</h6></label>
                     <br>
                     <select class="form-control" name="input1" id="input1">
                         <option value="" disabled selected>Select an option</option>
@@ -26,22 +26,27 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="input2">Etiology (Select as many as appropriate):</label>
-                    <br>
-                    <label class="checkbox-inline"><input type="checkbox" name="input2" value="0">Post-infectious</label>
-                    <br>
-                    <label class="checkbox-inline"><input type="checkbox" name="input2" value="1">Myelomeningocele</label>
-                    <br>
-                    <label class="checkbox-inline"><input type="checkbox" name="input2" value="2">IVH</label>
-                    <br>
-                    <label class="checkbox-inline"><input type="checkbox" name="input2" value="3">Non-tectal Tumor</label>
-                    <br>
-                    <label class="checkbox-inline"><input type="checkbox" name="input2" value="4">Tectal Tumor</label>
-                    <br>
-                    <label class="checkbox-inline"><input type="checkbox" name="input2" value="5">Aqueductal Stenosis</label>
+                    <label for="input2"><h6>Etiology (Select as many as appropriate):</h6></label>
+                    <div class="row">
+                        <div class="col">
+                            <label class="checkbox-inline"><input type="checkbox" name="input2" value="0">  Post-infectious</label>
+                            <br>
+                            <label class="checkbox-inline"><input type="checkbox" name="input2" value="1">  Myelomeningocele</label>
+                            <br>
+                            <label class="checkbox-inline"><input type="checkbox" name="input2" value="2">  IVH</label>
+                            <br>
+                        </div>
+                        <div class="col">
+                            <label class="checkbox-inline"><input type="checkbox" name="input2" value="3">  Non-tectal Tumor</label>
+                            <br>
+                            <label class="checkbox-inline"><input type="checkbox" name="input2" value="4">  Tectal Tumor</label>
+                            <br>
+                            <label class="checkbox-inline"><input type="checkbox" name="input2" value="5">  Aqueductal Stenosis</label>
+                        </div>
+                    </div>                    
                 </div>
                 <div class="form-group">
-                    <label for="input3">Previous Shunting:</label>
+                    <label for="input3"><h6>Previous Shunting:</h6></label>
                 <br>
                 <select class="form-control" name="input3" id="input3">
                     <option value="" disabled selected>Select an option</option>
@@ -56,7 +61,7 @@
             </div>
         </main>
         <footer>
-            <p>&copy; 2023 Medical Calculator. All rights reserved.</p>
+            <p>ETV success is defined as no need for CSF diverson for 6 months after ETV</p>
         </footer>
     </div>
     <script src="etvss_script.js"></script>
