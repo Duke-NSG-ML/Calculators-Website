@@ -1,99 +1,85 @@
+<!-- Pranav Warman  2023-->
 <!DOCTYPE html>
-<html lang="en" >
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>SCS Success Prediction Calculator</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap'><link rel="stylesheet" href="./style.css">
+    <title>Duke ETV Success Score</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add Montserrat font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
-<form>
-  
-  <div class="segment">
-    <h1 style="color:black;">SCS Success Prediction Calculator</h1>
-  </div>
-  </br>
-  <h3> Does the patient have a history of long-term opiate use<sup>1</sup>? </h3> 
-  <label>
-<!--     <input type="number"  id='var1' class="qty"  placeholder="0 or 1"/>
- -->
-   
-    <select class="qty" id="var1">
-          <option value="" disabled selected>Select your option</option>
-      <option value="0">No - 0</option>
-      <option value="1">Yes - 1</option>
-    </select>
-    </label>
-  <h3> Does the patient have a history of tumor without metastasis? </h3>
-
-  <label>
-    <select class="qty" id="var2">
-          <option value="" disabled selected>Select your option</option>
-      <option value="0">No - 0</option>
-      <option value="1">Yes - 1</option>
-    </select>
-  </label>
-  
-  
-  <h3> Presence of polypharmacy<sup>2</sup>? </h3>
-
-  <label>
-    <select class="qty" id="var4">
-          <option value="" disabled selected>Select your option</option>
-      <option value="0">No - 0</option>
-      <option value="1">Yes - 1</option>
-    </select>
-  </label>
-  
-  <h3> Is the patient concurrently using benzodiazepines<sup>3</sup>?  </h3>
- 
-   <label>
-    <select class="qty" id="var5">
-          <option value="" disabled selected>Select your option</option>
-      <option value="0">No - 0</option>
-      <option value="1">Yes - 1</option>
-    </select>
-  </label>
-  
-  <h3> Which pre-dose group<sup>4</sup> is the patient part of? </h3>
-
-  <label>
-    <select class="qty" id="var3">
-          <option value="" disabled selected>Select your option</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-  </label>
-  
-   <div class="segment" style="color:black;">
-    <h1>Prediction:</h1>
-     <span id="total_value" style='color:black;'>Enter Values Above</span>
-
-  </div>
-  </br>
-</br>
-  <h7>SCS success is defined as opioid dose stability or reduction one year after SCS. </h7>
-
-  </br>
-  </br>
-  <h7><sup>1</sup>Opioid usage for >90 days within the 1 year pre-SCS period.</h7>
-  </br>
-  </br>
-  <h7><sup>2</sup>Using more than 5 types of medications during the 3 month period prior to SCS trial.</h7>
-  </br>
-  </br>
-  <h7><sup>3</sup>At least 1 day of overlap between opioids and benzodiazepine prescriptions during the 3 month period before SCS trial.</h7>
-  </br>
-  </br>
-  <h7><sup>4</sup>Pre-Dose Groups are defined as according to <a href="https://www.oregonpainguidance.org/opioidmedcalculator/"> average daily milligram morphine equivalents (MME) </a> as follows: 1: ≤20, 2: 21-50, 3: 51-90, and 4: >90. </h7>
-  </br>
-  </br>
-  <h7>Full study pending publication in <i>Neurosurgery</i>.  </h7>
-  
-</form>
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./script.js"></script>
-
+    <div class="container">
+        <header class="text-center">
+            <h1>Duke ETV Success Score</h1>
+        </header>
+        <main>
+            <br>
+            <div class="calculator">
+                <div class="form-group">
+                    <label for="input1"><h6>Age of Patient:</h6></label>
+                    <br>
+                    <select class="form-control" name="input1" id="input1">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">Less than 1 month</option>
+                        <option value="2">1 - 6 months</option>
+                        <option value="3">6 months to 1 year</option>
+                        <option value="4">1 year to 10 years</option>
+                        <option value="5">≥ 10 years</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="input2"><h6>Etiology (Select as many as appropriate):</h6></label>
+                    <div class="row">
+                        <div class="col">
+                            <label class="checkbox-inline"><input type="checkbox" name="input2" value="0">  Infection</label>
+                            <br>
+                            <label class="checkbox-inline"><input type="checkbox" name="input2" value="1">  Myelomeningocele</label>
+                            <br>
+                            <label class="checkbox-inline"><input type="checkbox" name="input2" value="2">  IVH</label>
+                            <br>
+                        </div>
+                        <div class="col">
+                            <label class="checkbox-inline"><input type="checkbox" name="input2" value="3">  Nontectal Tumor</label>
+                            <br>
+                            <label class="checkbox-inline"><input type="checkbox" name="input2" value="4">  Tectal Tumor</label>
+                            <br>
+                            <label class="checkbox-inline"><input type="checkbox" name="input2" value="5">  Aqueductal Stenosis</label>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="form-group">
+                    <label for="input3"><h6>Previous Shunting:</h6></label>
+                <br>
+                <select class="form-control" name="input3" id="input3">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                </div>
+                <button class="btn btn-primary btn-block" onclick="predict()">Predict</button>
+            </div>
+            <br>
+            <br>
+            <div class="result">
+                
+                <p>
+                    About this model: 
+                    <ul>
+                        <li>ETV success is defined as no need for CSF diverson for 6 months after ETV.</li>
+                    </ul>
+                </p>
+                <br>
+                <br>
+                <h4 id="resultText" class="text-center">ETV Success Prediction:</h4>
+            </div>
+            <br>
+        </main>
+        <footer>
+            <p>Duke NSU-ML.</p>
+        </footer>
+    </div>
+    <script src="etvss_script.js"></script>
 </body>
 </html>
