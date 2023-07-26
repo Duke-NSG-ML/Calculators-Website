@@ -27,22 +27,23 @@ function predict() {
 
     // Process Input 2 (Select multiple options)
     const input2Values = document.querySelectorAll('input[name="input2"]:checked');
-    const input2Sum = Array.from(input2Values).reduce((acc, checkbox) => acc + parseFloat(checkbox.value), 0);
-
+    const input2Sum = Array.from(input2Values).reduce((acc, checkbox) => acc + weights[parseInt(checkbox.value)], 0);
     // Process Input 3 (Select one option)
     const input3Value = parseFloat(document.getElementById('input3').value);
 
     // Calculate the weighted sum
     const z = (
         weights[input1Value - 1] + // Subtract 1 since the values start from 1
-        weights[5 + input2Sum] +
+        input2Sum + 
         weights[11 + input3Value]
     );
-
+    
+    console.log(z);
     // Calculate the sigmoid of the weighted sum
     const prediction = sigmoid(z);
+    const predictionPercentage = (prediction *100).toFixed(2)
 
     // Display the prediction
     const resultElement = document.getElementById('resultText');
-    resultElement.innerText = `ETV Success Prediction: ${prediction.toFixed(2)}`;
+    resultElement.innerText = `ETV Success Prediction: ${predictionPercentage}%`;
 }
