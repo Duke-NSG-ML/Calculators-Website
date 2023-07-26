@@ -1,11 +1,13 @@
-
-
+<!-- Pranav Warman  2023-->
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Pranav Warman -->
     <title>Duke ETV Success Score</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add Montserrat font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
     <div class="container">
@@ -61,13 +63,21 @@
             <br>
             <br>
             <div class="result">
-                <h4 id="resultText" class="text-center"></h4>
+                
+                <p>
+                    About this model: 
+                    <ul>
+                        <li>ETV success is defined as no need for CSF diverson for 6 months after ETV.</li>
+                    </ul>
+                </p>
+                <br>
+                <br>
+                <h4 id="resultText" class="text-center">ETV Success Prediction:</h4>
             </div>
             <br>
         </main>
         <footer>
-            <p>ETV success is defined as no need for CSF diverson for 6 months after ETV.</p>
-            <p>Publication pending.</p>
+            <p>Duke NSU-ML.</p>
         </footer>
     </div>
     <script src="etvss_script.js"></script>
