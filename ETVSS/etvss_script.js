@@ -1,5 +1,6 @@
 // Pranav Warman 2023
-const weights = [0, 0, 0.06174190617021196, -0.3348953234353766, -0.18259168484911523, -0.20652259966317557, 0, -0.155977730977675, 0, 0, -0.01633977544968374, 0, -1.4890106987302139];
+const weights = [0.194, -0.181, 0.121, 0.118, 0.0, -0.286, -0.045, -0.047, 0.0, 0.035, 0.0, 0.0, -1.512, 0.945]
+// [0, 0, 0.06174190617021196, -0.3348953234353766, -0.18259168484911523, -0.20652259966317557, 0, -0.155977730977675, 0, 0, -0.01633977544968374, 0, -1.4890106987302139];
 
 function sigmoid(z) {
     return 1 / (1 + Math.exp(-z));
@@ -28,15 +29,17 @@ function predict() {
 
     // Process Input 2 (Select multiple options)
     const input2Values = document.querySelectorAll('input[name="input2"]:checked');
-    const input2Sum = Array.from(input2Values).reduce((acc, checkbox) => acc + weights[parseInt(checkbox.value)], 0);
+    const input2Sum = Array.from(input2Values).reduce((acc, checkbox) => acc + weights[parseInt(checkbox.value)+5], 0);
+    console.log(input2Sum)
     // Process Input 3 (Select one option)
     const input3Value = parseFloat(document.getElementById('input3').value);
-
+    console.log(weights[11 + input3Value])
     // Calculate the weighted sum
     const z = (
         weights[input1Value - 1] + // Subtract 1 since the values start from 1
         input2Sum + 
-        weights[11 + input3Value]
+        weights[11 + input3Value] +
+        weights[13]
     );
     
     console.log(z);

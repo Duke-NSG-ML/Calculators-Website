@@ -1,0 +1,89 @@
+/* Custom CSS styles for the page */
+/* Center the navigation text while keeping the logo on the left */
+
+/* Center the navigation text while keeping the logo on the left */
+
+
+
+
+body {
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+  margin: 0;
+  padding: 0;
+  background-color:#F5F5F5;
+
+}
+  
+  header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  nav p {
+    color: #fff;
+    margin-bottom: 0;
+  }
+  
+  .search-bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 10px;
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  .search-bar input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .container {
+    display: flex;
+    color:white;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sub-page-link {
+    text-decoration: none;
+  }
+  
+  .sub-page {
+    /* background-color:  #f0f0f0; */
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .sub-page:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #777777;
+}
+
+footer p {
+    font-size: 14px;
+}
