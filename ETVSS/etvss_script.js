@@ -1,5 +1,5 @@
 // Pranav Warman 2023
-const weights = [0.194, -0.181, 0.121, 0.118, 0.0, -0.286, -0.045, -0.047, 0.0, 0.035, 0.0, 0.0, -1.512, 0.945]
+const weights = [0.194, -0.181, 0.121, 0.118, 0.0, -0.286, -0.045, -0.047, 0.0, 0.035, 0.0, 0.0, 0.0, -1.512, 0.945]
 // [0, 0, 0.06174190617021196, -0.3348953234353766, -0.18259168484911523, -0.20652259966317557, 0, -0.155977730977675, 0, 0, -0.01633977544968374, 0, -1.4890106987302139];
 
 function sigmoid(z) {
@@ -33,13 +33,13 @@ function predict() {
     console.log(input2Sum)
     // Process Input 3 (Select one option)
     const input3Value = parseFloat(document.getElementById('input3').value);
-    console.log(weights[11 + input3Value])
+    console.log(weights[12 + input3Value])
     // Calculate the weighted sum
     const z = (
         weights[input1Value - 1] + // Subtract 1 since the values start from 1
         input2Sum + 
-        weights[11 + input3Value] +
-        weights[13]
+        weights[12 + input3Value] +
+        weights[14]
     );
     
     console.log(z);
